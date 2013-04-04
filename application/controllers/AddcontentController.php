@@ -22,14 +22,7 @@ class AddcontentController extends Zend_Controller_Action
  
         $this->view->form = $form;
         
-//        $this->view->headScript()->appendFile($this->view->baseUrl().'/includes/ckeditor/ckeditor.js');
-//        // if the form is submitted
-//	if($this->_request->isPost()) 
-//        {
-//	    $editor1 = stripslashes($this->_request->getPost('editor1'));
-//	    echo $editor1;
-//	    exit();
-//	}
+        
     }
 }
 ?>

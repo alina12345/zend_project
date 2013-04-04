@@ -13,7 +13,7 @@ class Application_Form_Addcontent extends Zend_Form
                   ->setRequired(true)
                   ->setValidators(array(array('stringlength',false,array(0,50))));
         
-        $pagecontent = new Zend_Form_Element_Textarea('pagecontent');
+        $pagecontent = new Zend_Form_Element_Textarea('pagecontent',array('id'=>'pagecontent'));
         $pagecontent->setLabel('Content')
                   ->setOptions(array('size' =>'500'))
                   ->setRequired(true)
