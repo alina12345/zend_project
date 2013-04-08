@@ -20,10 +20,6 @@ class IndexController extends Zend_Controller_Action
         $this->view->tdata =  $test;
         
     }
-    public function frontAction()
-    {
-        
-    }
 
 }
 

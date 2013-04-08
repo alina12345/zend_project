@@ -1,42 +1,38 @@
 <?php
 
-class Application_Form_Loginform extends Zend_Form
-{
-    
-    
-    public function init()
-    {
+class Application_Form_Loginform extends Zend_Form {
+
+    public function init() {
+        $this->setName("loginform");
         $this->setMethod('post');
-        $this->setAction('auth');
-        $this->setName('loginform');
-        
-        
-        //text input for username
+        $this->setAction(login/usercheck);
+        //print_r($pat);
+        // create text input for username
         $username = new Zend_Form_Element_Text('username');
-        $username->setLabel('Username:*')
-                 ->setOptions(array('size'=>'25'))
-                 ->setRequired(true);
-                 
-                 
-        
-        //text input for password
+        $username->setLabel('Username:')
+                ->setOptions(array('size' => '20'))
+                ->setRequired(true)
+                ->addFilter('stringTrim')
+                ->setValidators(array
+                    (array
+                        ('stringLength',false,array(0,50))));
+        // create text input for password
         $password = new Zend_Form_Element_Password('password');
-        $password->setLabel('Password:*')
-                 ->setOptions(array('size'=>'25'))
-                 ->setRequired(true);
-        
-        
-        //text input for submit button
+        $password->setLabel('Password:');
+        $password->setOptions(array('size' => '20'))
+                ->setRequired(true)
+                ->addFilter('stringTrim')
+                ->addValidators(array(array('stringLength',false,array(0,50))));
+       
+// create submit button
         $submit = new Zend_Form_Element_Submit(
-        'submit', array('class' => 'submit'),array(
-            'ignore'   => true));
-        $submit->setLabel('Login')
-               ->setIgnore(true);
-                           
-        // attach elements to form
+                'submit', array('class' => 'submit'));
+        $submit->setLabel('Login');
+// attach elements to form
         $this->addElement($username)
-             ->addElement($password)
-             ->addElement($submit);
-             
+                ->addElement($password)
+                ->addElement($submit);
+
     }
+
 }

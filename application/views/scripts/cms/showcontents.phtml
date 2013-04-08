@@ -1,0 +1,35 @@
+<div class="addnwpg">
+    <a href="addcontent">Add Page<img src="/images/add.png" alt="Add new page"></a>
+</div>
+
+<div class="back2dashboard">
+    <a href="dashboard">Back to Dashboard</a>
+</div>
+<div class="pgcontent">
+<table width="675" cellpadding="2" cellspacing="2" border="2">
+
+<tr>
+
+<th><strong>Page title</strong></th>
+
+<th><strong>Contents</strong></th>
+
+<th><strong>Published</strong></th>
+
+<th><strong>Action</strong></th>
+
+<?php foreach ($this->listdata as $row): ?>
+<tr>
+
+<td><?php echo $row['page_title']?></td>
+
+<td><?php echo $row['page_content']?></td>
+<td><?php echo $row['page_publish']?></td>
+
+<td><a href="edit?id=<?php echo $row['page_id']?>" onclick="return confirm('Are you sure you want to edit?');"><img src="/images/edit.png" height="25px" width="25px" alt="Edit"></a>&nbsp;&nbsp;<a href="deletecontents?page_id=<?php echo $row['page_id']?>" onclick="return confirm('Are you sure?');"><img src="/images/delete.png" height="25px" width="25px" alt="Delete" ></a></td>
+</tr>
+
+<?php endforeach; ?>
+
+</table>
+    </div>

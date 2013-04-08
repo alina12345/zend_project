@@ -1,0 +1,31 @@
+<div class="addnw">
+    <a href="addimages">Add image<img src="/images/add.png" alt="Add new image"></a>
+</div>
+
+<div class="back2dashboard">
+    <a href="dashboard">Back to Dashboard</a>
+</div>
+<div id="showimages">
+<table  width="295px" cellpadding="1" cellspacing="1" border="2">
+
+<tr>
+
+<th><strong>Photo Title</strong></th>
+<th><strong>Photo</strong></th>
+<th><strong>Action</strong></th>
+
+<?php foreach ($this->listdata as $row): ?>
+<tr>
+
+<td><?php echo $row['photo_title']?></td>
+<td><img src="/uploads/<?php echo $row['photo_name']?>" width="120px" 
+height="70px"</td>
+
+<td><a href="edit?id=<?php echo $row['page_id']?>" 
+       onclick="return confirm('Are you sure you want to edit?');"><img src="/images/edit.png" height="25px" width="25px" alt="Edit"></a>&nbsp;&nbsp;<a href="deletephoto?photo_id=<?php echo $row['photo_id']?>" onclick="return confirm('Are you sure?');"><img src="/images/delete.png" height="25px" width="25px" alt="Delete" ></a></td>
+</tr>
+
+<?php endforeach; ?>
+
+</table>
+</div>

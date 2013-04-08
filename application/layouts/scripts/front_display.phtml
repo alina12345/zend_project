@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Leapfrog College of Information Technology</title>
+    <?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/style.css'));?>        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+   
+        <div class="main">
+            <div class="header">
+                <div id="header_left">
+                    <img  align="left" src="<?php echo $this->baseUrl. '/images/sp.png'; ?>" />     
+                </div>
+                <div id="header_center">
+                    <h4>Leapfrog College of Information Technology</h4>
+                    <div id="hcenter_down">Tribhuvan University</div>
+                </div>
+                 <div id="header_right">
+                    <input id="search" type="text" name="text" placeholder="Search Here">
+                    <img src="<?php echo $this->baseUrl. '/images/search.png'; ?>" height='25' width='25'>
+                </div>
+            </div>
+            <div class="clear"></div>
+            
+            <div class="menu">
+                <ul> 
+                    <li><a href="/home"><font color="#FFFFFF">Home</font></a></li>
+                    <li><a href=""><font color="#FFFFFF">About Us</font></a></li>
+                    <li><a href=""><font color="#FFFFFF">Departments</font></a></li>
+                    <li><a href=""><font color="#FFFFFF">Gallery</font></a></li>
+                    <li><a href=""><font color="#FFFFFF">Contact Us</font></a></li>
+                </ul>
+            </div>
+            
+            <div class="cms_body">
+                <?php echo $this->layout()->content; ?>
+            </div>
+            <div class="footer">
+                <ul> 
+
+                    <li><a href=""><font color="black">Home</font></a></li>
+                    <li><a href=""><font color="black">About Us</font></a></li>
+                    <li><a href=""><font color="black">Departments</font></a></li>
+                    <li><a href=""><font color="black">Gallery</font></a></li>
+                    <li><a href=""><font color="black">Contact Us</font></a></li>
+                </ul>
+                <center> <img src="<?php echo $this->baseUrl . '/images/sp.png'; ?>" height="30px">
+                    <br>
+                    <font size="2px" color="black"><b>Copyright 2012, All Rights Reserved</b></font>
+                </center>
+            </div>

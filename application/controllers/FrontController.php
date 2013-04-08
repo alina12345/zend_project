@@ -1,49 +1,42 @@
 <?php
-
-class FrontController extends Zend_Controller_Action
-{
-    public function init()
-    {
-        /* Initialize action controller here */
-        $this->_layout = Zend_Layout::getMvcInstance();
-        $this->_layout->setLayout('front_layout');
-    }
+class FrontController extends Zend_Controller_Action{
     
-    public function homeAction()
-    {   
+    public function init(){
+        $this->_layout = Zend_Layout::getMvcInstance();
+        $this->_layout->setLayout('front_display');
         
+    }
+  
+    public function homeAction()
+    {
+       // echo 'asdf'; die;
         $Objshow = new Application_Model_DbTable_Frontmodel();
         $data = $Objshow->getPages('home');
         //print_r($data);die;
         $this->view->listdata = $data;
+ 
     }
     
     public function aboutusAction()
     {
-         
-        $Objshow = new Application_Model_DbTable_Frontmodel();
-        $data = $Objshow->getPages('about_us');
-        $this->view->listdata = $data;
+        
     }
     
-    public function departmentAction()
+    public function departmentsAction()
     {
-        $Objshow = new Application_Model_DbTable_Frontmodel();
-        $data = $Objshow->getPages('department');
-        $this->view->listdata = $data;
+        
     }
     
     public function galleryAction()
     {
-        $Objshow = new Application_Model_DbTable_Frontmodel();
-        $data = $Objshow->getPages('gallery');
-        $this->view->listdata = $data;
+        
     }
     
     public function contactusAction()
     {
-        $Objshow = new Application_Model_DbTable_Frontmodel();
-        $data = $Objshow->getPages('contact_us');
-        $this->view->listdata = $data;
+                
     }
+    
 }
+
+?>

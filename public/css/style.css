@@ -4,31 +4,6 @@
     margin: 0 auto;
     
 }
-.login_form
-{
-    margin:200px 0px 200px 0px;
-}
-
-.top_icons
-{
-    margin-top: 25px;
-    margin-bottom: 20px;
-   
-}
-.add_content
-{
-   border: 3px solid #008500;
-    color: #000000;
-    font-size: 16px;
-    border-radius: 1em;
-    
-    width: 1000px; 
-}
-
-#message{
-    color:red;
-}
-
 .header
 {
     background-image: url('../images/bek.png');
@@ -133,7 +108,7 @@ div.clear {
     background-image: url('../images/finalho.png');
     
     font-size: 30px;
-    text-align: center;
+
     border-radius: 15px;
     width:1004px;
 }
@@ -418,6 +393,13 @@ p
     text-decoration: underline;
 }
 
+
+.about_content #content_top
+{
+    width:1004px;
+    
+}
+/*cms backend dedicated css*/
 .cms_body
 {
    background-color: #F3F3F3;
@@ -429,70 +411,59 @@ p
     text-align: justify;
     width: 1004px;
 }
-.about_content #content_top
-{
-    width:1004px;
-    
-}
         
 #loginfrm {
-    
-    border: 3px solid #008500;
-    color: #000000;
+  background: none repeat scroll 0 0 #7A9CC5;
+    border: 1px solid #0060A1;
+    color: #FFFFFF;
     font-size: 16px;
-    border-radius: 1em;
+    margin-left: 300px;
     text-align: center;
-    width: 1000px;
-    
+    width: 290px;
 }
-h5
+#showimages
 {
-    text-decoration: none;
+    margin-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-h5 a
+
+
+.dash_content
 {
-    
-    color:#008500;
-    font-size: 18px;
-    text-decoration: none;
-    border:1px dotted #008500;
-}
-h5 a:hover
-{
-    color:black;
-    
-}
-.dash_content img
-{
-    margin-top: 40px;
-    border:2px dotted #008500;
+    margin-left: 110px;
     
 }
 
-#logout a
-{
-    text-decoration: none;
-    color:#008500;
-    font-size: 17px;
-    border:1px dotted #008500;
+.dashtop_left {
+    color: #008500;
+    float: left;
+    margin-left: 29px;
 }
-#logout a:hover
-{
- color:black;
-    text-decoration: underline;   
+.dashtop_right {
+    float: right;
+    margin-right: 25px;
+}
+.addnw{
+   float: left;
+    margin: 0 0 0 50px;
+    padding-right: 60px;
+}
+.addnwpg{
+    float: left;
+    padding-right: 27px;
 }
 
-.signup a
-{
-    text-decoration: none;
-    color:blue;
-    font-size: 17px;
-    font-weight: bold;
-    border:1px dotted blue;
-    margin-bottom: 20px;
+.back2dashboard{
+    float: right;
+    margin: 10px 25px 0px 0px;
 }
-.signup a:hover
-{
-    color:black;
-    text-decoration: underline;  
+.pgcontent{
+    padding-left: 120px;
+    padding-top: 50px;
+}
+#header_rt{
+    float: right;
+    padding-right: 20px;
+    padding-top: 72px;
 }
