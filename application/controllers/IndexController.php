@@ -7,65 +7,59 @@ class IndexController extends Zend_Controller_Action
     {
         /* Initialize action controller here */
         $this->_layout = Zend_Layout::getMvcInstance();
-        $this->_layout->setLayout('front_layout');
+        $this->_layout->setLayout('front_display');
     }
-
+    
     public function indexAction()
     {
-        // action body
         $Objshow = new Application_Model_DbTable_Frontmodel();
         $data = $Objshow->getPages('home');
         //print_r($data);die;
         $this->view->listdata = $data;
-        
-        $Objshow1 = new Application_Model_DbTable_Frontmodel();
-        $dataa = $Objshow1->getPages('homee');
-        $this->view->listdata1 = $dataa;
     }
-    
-    public function lfcmsAction()
+  
+    public function homeAction()
     {
-        echo 'ldsdlasdf';
-        $test='hello test';//$this->render('scripts/lfcms/lfcms');
-        $this->view->tdata =  $test;
-        
-    }
-    public function partpageAction()
-    {
+      
         $Objshow = new Application_Model_DbTable_Frontmodel();
-        $data = $Objshow->getPages('homee');
-        $this->view->listdataa = $data;
+        $data = $Objshow->getPages('home');
+        //print_r($data);die;
+        $this->view->listdata = $data;
+ 
     }
-    
-    
     
     public function aboutusAction()
     {
-         
         $Objshow = new Application_Model_DbTable_Frontmodel();
         $data = $Objshow->getPages('about_us');
+        //print_r($data);die;
         $this->view->listdata = $data;
     }
     
-    public function departmentAction()
+    public function departmentsAction()
     {
         $Objshow = new Application_Model_DbTable_Frontmodel();
-        $data = $Objshow->getPages('department');
+        $data = $Objshow->getPages('departments');
+        //print_r($data);die;
         $this->view->listdata = $data;
+        
     }
     
     public function galleryAction()
     {
         $Objshow = new Application_Model_DbTable_Frontmodel();
         $data = $Objshow->getPages('gallery');
-        $this->view->listdata = $data;
+        //print_r($data);die;
+        $this->view->listdata = $data;  
     }
     
     public function contactusAction()
     {
         $Objshow = new Application_Model_DbTable_Frontmodel();
         $data = $Objshow->getPages('contact_us');
+        //print_r($data);die;
         $this->view->listdata = $data;
+                
     }
 
 }

@@ -1,9 +1,6 @@
-<div class="add_content">
-    <center>Welcome &nbsp;<?php echo $this->username ?>,<br> This is your dashboard<br>
-<div id="logout"><a href="../login/logout">Logout</a></div></center>
-    <div class="top_icons">
-        &nbsp;&nbsp;&nbsp;&nbsp;<a href='/cms/show'><img src="../images/action_cancel.gif"></a>
-    </div>
+<div class="back2dashboard">
+    <a href="dashboard">Back to Dashboard</a>
+</div>
 <?php  echo $this->headScript()->appendFile('/ckeditor/ckeditor.js'); 
 
     //display the form
@@ -24,5 +21,3 @@ echo $this->form;
             filebrowserWindowHeight : '300'});
     
 </script>
-</div>
-        

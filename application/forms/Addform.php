@@ -15,10 +15,13 @@ class Application_Form_Addform extends Zend_Form
                     (array
                         ('stringLength',false,array(0,255))));
         // create text input for email address
-        $page_content = new Zend_Form_Element_Textarea('page_content',array('required'));
+        $page_content = new Zend_Form_Element_Textarea('page_content');
         $page_content->setLabel('Content:');
-        $page_content->setRequired(true);
-                
+        $page_content->setOptions(array('size' => '500'))
+                ->setRequired(true)
+                ->setValidators(array
+                    (array
+                        ('stringLength',false,array(0,5000))));
   $page_publish = new Zend_Form_Element_Radio('page_publish');
  $page_publish->setLabel('Publish :')
                      ->addMultiOptions(array(
@@ -26,17 +29,11 @@ class Application_Form_Addform extends Zend_Form
                         'no' => 'Do not Publish'))
                      ->setValue('yes')
                      ->setSeparator('');
-                     
- 
- 
- //add userid
-        $this->addElement('hidden','page_id',array('required'=>false,));
                
 // create submit button
         $submit = new Zend_Form_Element_Submit(
                 'submit', array('class' => 'submit'));
         $submit->setLabel('Save');
-        $submit->setIgnore(true);
 // attach elements to form
         $this->addElement($page_title)
                 ->addElement($page_content)
