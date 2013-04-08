@@ -1,0 +1,20 @@
+<table border="1" align="center">
+ <tr align="center">
+  <th>Page ID</th>
+  <th>Page Content</th>
+  <th>Page Title</th>
+ </tr>
+
+ <?php
+
+ foreach( $this->show as $data ) {
+
+  echo "<tr align='left'>
+          <td>" . $data['page_id'] . "</td>
+          <td>" . $data['page_title'] . "</td>
+          <td>" . $data['page_content'] . "</td>
+        </tr>";
+ }
+ ?>
+
+</table>

@@ -22,8 +22,8 @@ class Application_Form_Addcontent extends Zend_Form
                 ->setValidators(array
                     (array
                         ('stringLength',false,array(0,500))));
-  $page_publish = new Zend_Form_Element_Radio('page_publish');
- $page_publish->setLabel('Publish :')
+        $page_publish = new Zend_Form_Element_Radio('page_publish');
+        $page_publish->setLabel('Publish :')
                      ->addMultiOptions(array(
                         'yes' => 'Publish',
                         'no' => 'Do not Publish'))

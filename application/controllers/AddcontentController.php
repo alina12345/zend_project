@@ -9,12 +9,9 @@ class AddcontentController extends Zend_Controller_Action
     
     public function addcontentAction()
     {
-        //$users  = new Users();
-        //$request = $this->getRequest(); 
         $form  = new Application_Form_Addcontent();
         $this->view->form = $form;
-        echo 'asdf';
-         if ($this->getRequest()->isPost()) 
+        if ($this->getRequest()->isPost()) 
          {
             $formData = $this->getRequest()->getPost();
              if ($form->isValid($formData))
@@ -46,6 +43,6 @@ class AddcontentController extends Zend_Controller_Action
             }
         }
   
-    }
+    }      
 }
 ?>
