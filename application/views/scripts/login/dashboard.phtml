@@ -1,0 +1,18 @@
+<div id="loginfrm">
+<?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/style.css'));?>
+Welcome &nbsp;<?php echo $this->username ?>,<br> This is your dashboard<br>
+<div id="logout"><a href="logout">Logout</a></div>
+<div class="dash_content">
+            <table>
+                <tr>
+                    <td width="150px"></td>
+                    <td width="400px"><a href=""><center><img src="<?php echo $this->baseUrl. '/images/splash_home_gallery.png';?>" width="150px" height="150px"></center></a><br>
+                        <h5 align="center"><i><a href="#">Gallery Management</a></i></h5>
+                    </td>
+                    <td><a href="../cms/show"><center><img src="<?php echo $this->baseUrl. '/images/CMS-image_1.jpg';?>" width="150px" height="150px"></center></a><br>
+                        <h5 align="center"><i><a href="../cms/show">CMS</a></i></h5>
+                    </td>
+                </tr>
+            </table>
+</div>
+</div>

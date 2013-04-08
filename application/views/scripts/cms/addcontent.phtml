@@ -1,0 +1,20 @@
+<div class="add_content">
+    <center>Welcome &nbsp;<?php echo $this->username ?>,<br> This is your dashboard<br>
+<div id="logout"><a href="../login/logout">Logout</a></div></center>
+    <div class="top_icons">
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href='/cms/show'><img src="../images/action_cancel.gif"></a>
+    </div>
+<?php  echo $this->headScript()->appendFile('/js/ckeditor/ckeditor.js'); 
+
+    //display the form
+echo $this->form;
+ 
+ ?>
+<!-- to embed ckeditor in the textarea whose id is 'pagecontent'-->
+<script type="text/javascript">
+    
+        CKEDITOR.replace('page_content');
+    
+</script>
+</div>
+        

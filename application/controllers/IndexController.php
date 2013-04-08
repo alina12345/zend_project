@@ -12,8 +12,18 @@ class IndexController extends Zend_Controller_Action
     {
         // action body
     }
-
+    
+    public function lfcmsAction()
+    {
+        echo 'ldsdlasdf';
+        $test='hello test';//$this->render('scripts/lfcms/lfcms');
+        $this->view->tdata =  $test;
+        
+    }
+    public function frontAction()
+    {
+        
+    }
 
 }
 
-?>

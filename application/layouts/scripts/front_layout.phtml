@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Leapfrog College CMS</title>
+    <?php echo $this->headLink()->prependStylesheet($this->baseUrl('/css/style.css'));?>        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <center>
+        <div class="main">
+            <div class="header">
+                <div id="header_left">
+                    <img  align="left" src="<?php echo $this->baseUrl. '/images/sp.png'; ?>" />     
+                </div>
+                <div id="header_center">
+                    <h4>Leapfrog College CMS</h4>
+                    <div id="hcenter_down">Admin Section</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <?php echo $this->render('inc/menu.phtml') ?>
+            <div class="cms_body">
+                <?php echo $this->layout()->content; ?>
+            </div>
+            <div class="footer">
+                            <center> <img src="<?php echo $this->baseUrl. '/images/sp.png'; ?>" height="30px">
+                    <br>
+                    <font size="2px" color="black"><b>Copyright 2012, All Rights Reserved</b></font>
+                </center>
+            </div>

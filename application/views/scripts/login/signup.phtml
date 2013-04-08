@@ -1,0 +1,11 @@
+<div id="loginfrm">
+    <div id="message">
+<?php if (isset($this->errorMessage))
+{
+    echo $this->errorMessage;
+}
+?>
+    </div>
+<?php echo $this->form ;?>
+<div class="signup"><a href='login'>Login</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href='signup'>Sign Up</a> </div>       
+</div>      
